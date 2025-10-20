@@ -12,8 +12,11 @@ use {
 	tokio_vsock::VsockStream,
 };
 
-#[cfg(any(feature = "http", feature = "kms"))]
+#[cfg(any(feature = "http", feature = "kms",  feature = "sm"))]
 pub mod http;
+
+#[cfg(any(feature = "kms",  feature = "sm"))]
+pub mod credentials;
 
 /// The piece of data that was being read/written when an error occurred.
 #[derive(Debug)]

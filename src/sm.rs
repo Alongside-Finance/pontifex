@@ -4,7 +4,8 @@ use aws_types::SdkConfig;
 use tokio_vsock::VsockAddr;
 
 use crate::utils::http::vsock_proxy;
-use crate::kms::{Credentials, VSOCK_PROXY_CID};
+use crate::utils::credentials::Credentials;
+use crate::kms::VSOCK_PROXY_CID;
 
 /// Creates a new KMS client.
 #[must_use]

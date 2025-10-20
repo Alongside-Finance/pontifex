@@ -36,6 +36,15 @@ kms = [
     "dep:aws-smithy-runtime-api",
     "dep:aws-smithy-http-client",
 ]
+sm = [
+    "dep:hyper",
+    "dep:rustls",
+    "dep:aws-types",
+    "dep:aws-sdk-secretsmanager",
+    "dep:hyper-rustls",
+    "dep:aws-smithy-runtime-api",
+    "dep:aws-smithy-http-client",
+]
 
 [package.metadata.docs.rs]
 all-features = true
@@ -52,6 +61,7 @@ aws-types = { version = "1", optional = true }
 tokio = { version = "1", features = ["io-util"] }
 serde_bytes = { version = "0.11", optional = true }
 aws-sdk-kms = { version = "1.72.0", optional = true }
+aws-sdk-secretsmanager = { version = "1.72.0", optional = true }
 serde_cbor = { version = "0.11", default-features = false, optional = true }
 hyper-rustls = { version = "0.25.0", optional = true, features = ["webpki-roots"] }
 aws-smithy-runtime-api = { version = "1.8.0", features = ["client"], optional = true }

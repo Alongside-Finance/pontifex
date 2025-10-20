@@ -89,8 +89,18 @@ pub use nsm::{AttestationDoc, AttestationError};
 #[cfg(feature = "kms")]
 pub mod kms;
 
+#[cfg(feature = "sm")]
+#[allow(missing_docs)]
+pub mod sm;
+
 /// HTTP-through-vsock
 #[cfg(feature = "http")]
 pub mod http;
 
+#[allow(missing_docs)]
 mod utils;
+
+/// Add visibility to utils
+#[cfg(any(feature = "kms", feature = "sm"))]
+#[allow(missing_docs)]
+pub use crate::utils::credentials::Credentials;
