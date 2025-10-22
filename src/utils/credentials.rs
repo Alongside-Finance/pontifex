@@ -1,4 +1,6 @@
 /// Credentials to use for KMS requests.
+
+#[derive(Debug, Clone)]
 pub struct Credentials {
 	pub access_key_id: String,
 	pub secret_access_key: String,
